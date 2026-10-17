@@ -1,0 +1,28 @@
+{
+  "name": "murongfu",
+  "version": "1.0.0",
+  "description": "慕容复 (Murongfu) —— AI Agent 斗转星移技能路由器与合成引擎 (Probe -> Decision Model -> Weighted Synthesizer -> Host Agent)",
+  "keywords": ["ai-agent", "mcp", "skill-router", "prompt-synthesizer", "kev", "jev", "clef", "cursor", "claude-code"],
+  "license": "MIT",
+  "bin": {
+    "murongfu": "./dist/cli/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts src/cli/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "commander": "^12.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
